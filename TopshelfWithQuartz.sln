@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quartz.Client", "Quartz.Client\Quartz.Client.csproj", "{B51D5469-3055-41F7-8D41-475D4CBEABF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzSampleApp", "QuartzSampleApp\QuartzSampleApp.csproj", "{468AD757-7B4F-4CB0-A395-D39F0BA6CF34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B51D5469-3055-41F7-8D41-475D4CBEABF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51D5469-3055-41F7-8D41-475D4CBEABF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51D5469-3055-41F7-8D41-475D4CBEABF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51D5469-3055-41F7-8D41-475D4CBEABF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468AD757-7B4F-4CB0-A395-D39F0BA6CF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468AD757-7B4F-4CB0-A395-D39F0BA6CF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468AD757-7B4F-4CB0-A395-D39F0BA6CF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468AD757-7B4F-4CB0-A395-D39F0BA6CF34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50C1C424-33CA-415D-831E-B42B8F6EED04}
+	EndGlobalSection
+EndGlobal
