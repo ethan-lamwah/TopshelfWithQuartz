@@ -52,9 +52,8 @@ namespace Quartz.Client
                 JobKey jk = new JobKey(jobKey);
                 if (_scheduler.CheckExists(jk).Result)
                 {
-                    //任务已经存在则暂停任务
                     _scheduler.PauseJob(jk);
-                    Console.WriteLine(string.Format("任务“{0}”已经暂停", jobKey));
+                    Console.WriteLine(string.Format("Job {0} is paused", jobKey));
                 }
             }
             catch (Exception ex)

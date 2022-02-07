@@ -28,34 +28,34 @@ namespace QuartzSampleApp
             //    new System.Collections.Generic.KeyValuePair<string, object>("TransactionDate", "2022-01-26"),
             //    new System.Collections.Generic.KeyValuePair<string, object>("TransactionAccount", "999-123456-001")
             //};
-            ScheduleJobWithCronSchedule<TransactionJob>("500-259957-001");
-            //ScheduleJobWithCronSchedule<TransactionJob>("808-893630-209");
-            //ScheduleJobWithCronSchedule<TransactionJob>("500-259957-201");
-            //ScheduleJobWithCronSchedule<TransactionJob>("511-509820-002");
-            //ScheduleJobWithCronSchedule<TransactionJob>("808-893671-209");
-            //ScheduleJobWithCronSchedule<TransactionJob>("808-485866-201");
-            //ScheduleJobWithCronSchedule<TransactionJob>("848-369252-001");
-            //ScheduleJobWithCronSchedule<TransactionJob>("848-369252-201");
-            //ScheduleJobWithCronSchedule<TransactionJob>("741-061295-838");
-            //ScheduleJobWithCronSchedule<TransactionJob>("741-061410-201");
-            //ScheduleJobWithCronSchedule<TransactionJob>("741-324818-838");
-            //ScheduleJobWithCronSchedule<TransactionJob>("741-323984-278");
+
+            //Simulate transaction server job
+            ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-001");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-002");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-003");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-004");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-005");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-006");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-007");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-008");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-009");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-010");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-011");
+            //ScheduleJobWithCronSchedule<TransactionJob>("999-1234567-012");
         }
 
+        // using simple schedule
         private void ScheduleJobWithSimpleSchedule<T>(string account) where T : IJob
         {
             string jobName = typeof(T).Name + "." + account;
-            // Create a job
             IJobDetail job = JobBuilder.Create<T>()
                 .WithIdentity(jobName, $"{jobName}-Group")
                 .UsingJobData("TransactionDate", "2022-01-28")
                 .UsingJobData("TransactionAccount", account)
                 .Build();
 
-            // Creat a trigger
             ITrigger trigger = TriggerBuilder.Create()
                 .WithIdentity($"{jobName}-Trigger", $"{jobName}-Trigger-Group")
-                //.StartNow()
                 .StartAt(DateBuilder.DateOf(6, 0, 0))
                 .WithSimpleSchedule(x => x
                     .WithIntervalInMinutes(1)
@@ -65,21 +65,19 @@ namespace QuartzSampleApp
                 .EndAt(DateBuilder.DateOf(22, 0, 0))
                 .Build();
 
-            // Schedule the job using the trigger
             _scheduler.ScheduleJob(job, trigger);
         }
 
+        //Using Cron expression
         private void ScheduleJobWithCronSchedule<T>(string account) where T : IJob
         {
             string jobName = typeof(T).Name + "." + account;
-            // Create a job
             IJobDetail job = JobBuilder.Create<T>()
                 .WithIdentity(jobName, $"{jobName}-Group")
                 .UsingJobData("TransactionDate", "2022-01-28")
                 .UsingJobData("TransactionAccount", account)
                 .Build();
 
-            // Creat a trigger
             ITrigger trigger = TriggerBuilder.Create()
                 .WithIdentity($"{jobName}-Trigger", $"{jobName}-Trigger-Group")
                 //.StartNow()
@@ -89,7 +87,6 @@ namespace QuartzSampleApp
                 .EndAt(DateBuilder.DateOf(22, 0, 0))
                 .Build();
 
-            // Schedule the job using the trigger
             _scheduler.ScheduleJob(job, trigger);
         }
 
