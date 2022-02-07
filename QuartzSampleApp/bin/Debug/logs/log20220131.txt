@@ -1,0 +1,33 @@
+09:20:50.501 [INF] Configuration Result:
+[Success] Name Topshelf-Quartz
+[Success] DisplayName Topshelf service with Quartz
+[Success] Description My Topshelf service with Quartz.NET and Serilog
+[Success] ServiceName Topshelf-Quartz
+09:20:50.548 [INF] Topshelf v4.3.0.0, .NET Framework 4.8.4042.0 (4.0.30319.42000)
+09:20:50.610 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+09:20:50.610 [INF] Quartz Scheduler created
+09:20:50.610 [INF] JobFactory set to: Autofac.Extras.Quartz.AutofacJobFactory
+09:20:50.626 [INF] RAMJobStore initialized.
+09:20:50.657 [INF] Remoting is allowing remote calls
+09:20:50.657 [INF] Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+09:20:50.673 [INF] Remoting channel registered successfully
+09:20:50.673 [INF] Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+09:20:50.673 [INF] Scheduler meta-data: Quartz Scheduler (v3.3.3.0) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 3 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+09:20:50.673 [INF] Quartz scheduler 'MyScheduler' initialized
+09:20:50.673 [INF] Quartz scheduler version: 3.3.3.0
+09:20:50.688 [INF] [S-Listener] SchedulerStarting
+09:20:50.688 [INF] Scheduler MyScheduler_$_NON_CLUSTERED started.
+09:20:50.704 [INF] [S-Listener] SchedulerStarted
+09:20:50.751 [INF] [S-Listener] JobAdded: TransactionJob.500-259957-001-Group.TransactionJob.500-259957-001
+09:20:50.751 [INF] [S-Listener] JobScheduled: TransactionJob.500-259957-001-Trigger-Group.TransactionJob.500-259957-001-Trigger
+09:20:50.751 [INF] The Topshelf-Quartz service is now running, press Control+C to exit.
+09:20:50.782 [INF] [J-Listener] JobToBeExecuted: TransactionJob.500-259957-001-Group.TransactionJob.500-259957-001, for 500-259957-001
+09:20:50.782 [WRN] Instance TransactionJob.500-259957-001-Group.TransactionJob.500-259957-001 of TransactionJob at 2022-01-28, Account=500-259957-001, Previous run: 
+09:20:50.798 [INF] [J-Listener] JobWasExecuted: TransactionJob.500-259957-001-Group.TransactionJob.500-259957-001
